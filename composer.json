@@ -1,0 +1,24 @@
+{
+    "name": "lg-xenos/yii2-multiple-selector",
+    "description": "Yii2 widget Multiple Selector",
+    "keywords": ["yii2", "widget"],
+    "type": "yii2-extension",
+    "support": {
+        "source": "https://github.com/lgxenos/yii2-multiple-selector",
+        "issues": "https://github.com/lgxenos/yii2-multiple-selector/issues"
+    },
+    "authors": [
+        {
+            "name": "RomanSh",
+            "homepage": "https://github.com/lgxenos/"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "lgxenos\\yii2\\multipleSelector\\": ""
+        }
+    }
+}

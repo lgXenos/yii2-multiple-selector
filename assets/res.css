@@ -1,0 +1,12 @@
+.multipleCheckbox {
+	border: 1px solid #ddd;
+	padding: 3px 7px;
+	margin: 3px;
+	border-radius: 4px;
+	font-size: 12px;
+	display: inline-block;
+	max-width: 29%;
+	white-space: nowrap; /* Запрещаем перенос строк */
+	overflow: hidden; /* Обрезаем все, что не помещается в область */
+	text-overflow: ellipsis; /* Добавляем многоточие */
+}
