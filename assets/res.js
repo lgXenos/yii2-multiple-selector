@@ -30,14 +30,23 @@ function addListenersToDropdownLists(asd) {
 			// если есть выбранные обьекты - заполняем ими контейнер. иначе - выводим что кликните куда-нибудь
 			if (objs.length) {
 				text = [];
+				text.push('<span class="multipleCheckbox resetAllBtn js_resetAll" title="Убрать все выделения">[X]</span>');
 				objs.each(function (index) {
 					// берем текст селекта и убираем все, что в квадратных скобках
 					text.push('<span class="multipleCheckbox">'+ $(this).text().replace(/\[[\s\S]*\]/, '') + '</span>');
 				});
 				$('.' + newClass).html(text.join(' '));
 			}
+			else{
+				$('.' + newClass).html('');
+			}
 		});
 
+		// слушаем кнопку сброса всех выделенных
+		$('.'+newClass).on('click', '.js_resetAll', function (e) {
+			$('#'+currObj.attr('id')).children('option:selected').prop('selected', false).attr({selected:false});
+			setTimeout(function(){currObj.trigger('change')},50);
+		});
 		// тригерим изменялку для пересчитывания выбранных и помечаем что уже с добавленным слушателем
 		currObj.trigger('change');
 		currObj.addClass(multiDetected);

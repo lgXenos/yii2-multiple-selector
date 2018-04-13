@@ -10,3 +10,8 @@
 	overflow: hidden; /* Обрезаем все, что не помещается в область */
 	text-overflow: ellipsis; /* Добавляем многоточие */
 }
+.resetAllBtn{
+	cursor: pointer;
+	color: #900;
+	font-weight: bold;
+}
